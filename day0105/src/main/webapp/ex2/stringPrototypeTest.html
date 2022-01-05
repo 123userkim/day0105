@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		String.prototype.contain= function (data) {
+			//data가 문자열에 포함이 되어있다면
+			return this.indexOf(data) >=0;
+			//존재한다면 true아님 false
+		}
+		
+		let msg = "hello java";
+		console.log(msg.contain("java"));
+		console.log(msg.contain("oracle"));
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*	
+			let data = [10,20,30,40,50];
+		
+				//()안에 데이터를 꺼내와서 동작할 함수를 넣어줌
+				//item는 배열의 요소 - >이름은 아무거나 지음
+				//index는 배열의 인덱스
+				data.forEach(function (item,index) {
+					//console.log(item+","+index);					 //10,0/20,1/30,2/40,3/50,4
+					console.log(`${index}번째 요소는 ${item}입니다.`);  	//0번째 요소는 10입니다.
+				}); 
+		*/
+
+
+			//foreach함수를 이용해서 평균나이를 계산
+			data =[
+				
+				{name:'이순신',age :20},
+				{name:'유관순',age :21},
+				{name:'김유신',age :20},
+				{name:'홍길동',age :22},
+				{name:'강감찬',age :30},
+				
+			];
+			
+			let total =""; 
+			data.forEach(function (item,index) {
+				total = Number(total+item.age);	
+			}); 
+			
+			let avg = total/data.length;
+			console.log(`평균나이는 ${avg}살 입니다.`);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	//Number객체의 프로토타입을 이용해서 메소드를 추가해야 함
+	//기본자료형의 메소드는 무조건 프로토타입을 이용함
+		let a = 53;
+	
+		/*
+		a.pro = function () {
+			return "기본자료형입니다.";
+		}		
+		console.log(a.pro());
+		*/
+		
+		Number.prototype.pro= function () {
+			return "기본 자료형입니다.";
+		}		
+		console.log(a.pro());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

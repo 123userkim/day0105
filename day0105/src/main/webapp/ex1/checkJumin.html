@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function pro() {
+	//charAt은 문자열 함수라서, Number을 하면 암됨
+		let jumin =document.getElementById("jumin").value;
+	 /*
+		let sex = charAt(jumin.indexOf("-")+1);
+	*/
+	
+	//ㅍ = 11-{(2×ㄱ+3×ㄴ+4×ㄷ+5×ㄹ+6×ㅁ+7×ㅂ+8×ㅅ+9×ㅇ+2×ㅈ+3×ㅊ+4×ㅋ+5×ㅌ) mod 11}
+	let arr = [2,3,4,5,6,7,0,8,9,2,3,4,5];
+	let total = 0;
+	//800101-1234567
+	for(let i=0; i <jumin.length-1 ; i++){
+		if(i == 6 ){
+			continue;
+		}
+		total += Number(jumin.charAt(i))* arr[i];
+	}
+	 
+	total  = total%11;
+	total = 11-total;
+	if(total==10){
+		total = 0;
+	}if(total==11){
+		total = 1;
+	}
+	let check = Number(jumin.charAt(13));
+	if(check!=total){
+		alert("올바른 주민번호가 아닙니다.");
+		return;
+	}
+	
+	let sex = jumin.charAt(7);			 
+	if(sex ==1 || sex==3){
+		document.getElementById("result").innerHTML="남성";
+	}else{
+		document.getElementById("result").innerHTML="여성";				
+	}
+}
+ 	
+</script>
+</head>
+<body>
+주민번호를 입력하시오
+<input type="text" id="jumin">
+<button onclick="pro()">확인</button>
+<hr>
+<div id="result"></div>
+</body>
+</html>

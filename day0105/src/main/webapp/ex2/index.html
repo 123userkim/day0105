@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//http://192.168.0.13:8080/moblieTest/index.html
+//사용자 브라우저가 모바일용이면 위의 링크로 가게
+	let uesr = navigator.userAgent;
+	user = uesr.toLowerCase();
+	if(user.indexOf("mobile")!=-1){
+		//모바일이라는 글자가 있다면
+		location.href= "http://192.168.0.13:8080/moblieTest/index.html";
+	}	
+</script>
+</head>
+<body bgcolor="yellow">
+	<h2>데스트탑 서비스입니다.</h2>
+	<hr>
+</body>
+</html>

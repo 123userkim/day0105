@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function checkDelete() {
+	//confirm : 예, 아니오 단추가 있음
+	//alert : 확인 단추만
+		let re = confirm("정말로 삭제하시겠어요?");
+		if(re==true){
+		//삭제버튼이 true
+			location.href="goodsDelete.jsp";
+		}
+	}
+</script>
+</head>
+<body>
+	<a href="#" onclick="checkDelete()">삭제</a>
+</body>
+</html>
